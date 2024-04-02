@@ -42,7 +42,7 @@ public class MyFrameEx4 extends JFrame {
 		// 현재 창(Center)에 JTextArea 추가
 		this.add(ta = new JTextArea());
 		
-		this.setBounds(500, 150, 500, 300);
+		this.setBounds(400, 150, 500, 300);
 		this.setTitle("My Frame V0.57");
 		this.setVisible(true);
 		
