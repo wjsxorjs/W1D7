@@ -68,7 +68,11 @@ public class MyFrameEx1 extends JFrame implements ActionListener{
 		// 이벤트를 작동시킨 행위자가 누구인지 ActionEvent e로 들어온다.
 		// 그래서 행위자에 따라 동작을 달리 해야한다면 e.getSource()로 행위자의 객체 정보를 가져오고
 		// "주소값 비교"를 통해 행위자에 맞는 동작을 하도록 구현해준다.
-		Object obj = e.getSource();
+		
+		// 누가 작동시켰는지 확인
+		Object obj = e.getSource(); // Object로 반환하는 이유는 이벤트 객체들이 다양하기에 모두가 공통적으로 상속받고 있는 Object로 반환해준다.
+		
+		// 존재하는 객체들과 주소값 비교 (==)
 		if(obj == bt1) {
 			p2.setBackground(Color.RED);
 		} else if(obj == bt2) {
