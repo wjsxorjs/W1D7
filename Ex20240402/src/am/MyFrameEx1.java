@@ -8,14 +8,17 @@ public class MyFrameEx1 extends JFrame {
 	
 	// 멤버변수 선언!!!
 	MyWinAdpt myWAd; // WindowListner를 구현한 객체
-	JButton btn1, btn2; // 버튼 변수
+	JButton btn1, btn2, btn3, btn4, btn5; // 버튼 변수
 	
 	public MyFrameEx1() {
 		// 생성자의 목적: 멤버변수들에 대한 초기화
 		
 		// 원하는 버튼 객체 생성
-		btn1 = new JButton("버튼1");	// < 해당 생성자는 5가지가 있는데, 이는 여러 방법으로 생성할 수 있음을 뜻한다.
-		btn2 = new JButton("버튼2");	// < 이게 버튼 하나다. 버튼을 만들었다. 다만, 프레임에는 두지않았기에 나오지는 않는다.
+		btn1 = new JButton(BorderLayout.NORTH);	// < 해당 생성자는 5가지가 있는데, 이는 여러 방법으로 생성할 수 있음을 뜻한다.
+		btn2 = new JButton(BorderLayout.SOUTH);	// < 이게 버튼 하나다. 버튼을 만들었다. 다만, 프레임에는 두지않았기에 나오지는 않는다.
+		btn3 = new JButton(BorderLayout.WEST);
+		btn4 = new JButton(BorderLayout.EAST);
+		btn5 = new JButton(BorderLayout.CENTER);
 		
 //		btn1.setSize(100, 50);
 //		btn1.setLocation(100, 50);
@@ -29,8 +32,12 @@ public class MyFrameEx1 extends JFrame {
 		// 그럴 경우, 새로운 객체를 생성해야하기에 프로그램 수행 효율 및 시간을 최적화시키고자 이미 선언된 상수를 사용함.
 		
 		this.add(btn2, BorderLayout.SOUTH); 	// layout으로 인해서 먼저 생성된 btn1이 덮어씌어진다?
-						//										겹쳐진다?
-						//										지워진다?
+												//										겹쳐진다?
+												//										지워진다?
+		
+		this.add(btn3, BorderLayout.WEST);
+		this.add(btn4, BorderLayout.EAST);
+		this.add(btn5, BorderLayout.CENTER);
 		
 		// 5개의 영역 당 하나의 객체만 넣을 수 있다.
 		// 그래서, 나무판자(JPanel)를 만들어서 버튼을 거기에
