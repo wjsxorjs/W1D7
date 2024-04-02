@@ -10,7 +10,7 @@ public class BfTest extends JFrame { 	// 재정의는 상속관계에 있는 서
 										// 우선순위가 자식클래스에서 재정의한 메소드로 주어진다.
 	
 	BfTestWL btWL;
-	
+	// 생성자
 	public BfTest() {
 		this.setSize(500, 600);
 		this.setLocation(500, 150);
