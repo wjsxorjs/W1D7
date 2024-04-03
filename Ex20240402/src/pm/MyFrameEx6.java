@@ -41,14 +41,23 @@ public class MyFrameEx6 extends JFrame implements ActionListener {
 			
 			if(chk) {
 				lottoTmp[i] = lotNum;
-				ImageIcon icon = new ImageIcon ("src/images/lotto/"+lotNum+".gif");
-				panel2.add(new JLabel(icon));
+//				ImageIcon icon = new ImageIcon ("src/images/lotto/"+lotNum+".gif");
+//				panel2.add(new JLabel(icon));
 				i++;
 			}
 		}
+		
+		this.imageGen(lottoTmp);
 
 	}
 	
+	// 이미지 넣어주는 함수를 따로 뺌
+	public void imageGen(int[] lotNum) {
+		for(int i=0; i<lotNum.length; i++) {
+			ImageIcon icon = new ImageIcon ("src/images/lotto/"+lotNum[i]+".gif");
+			panel2.add(new JLabel(icon));
+		}
+	}
 	
 	public MyFrameEx6() {
 		
